@@ -1,3 +1,42 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container">
+  <div class="row vertical-center">
+    <div class="col-xs-6 col-xs-offset-3 border">
+      <section>
+        <h1 class="text-center">Tips Calculator</h1>
+
+        <div class="form-group">`
+          <label for="billTotal">Bill Total</label>
+          <input type="number" class="form-control" id="billTotal" placeholder="Bill Total" value="10" [(ngModel)]="billTotal">
+        </div>
+
+        <div class="form-group">
+          <label for="tipPercentage">Tip %</label>
+          <input type="number" class="form-control" id="tipPercentage" placeholder="Tip %" value="20" min="1" max="30" [(ngModel)]="tipPercentage">
+        </div>
+
+        <div class="form-group">
+          <label for="split">Split</label>
+          <input type="text" class="form-control" id="split" placeholder="Split" value="1" min="1" max="30" [(ngModel)]="splitNumber">
+        </div>
+
+      </section>
+
+      <section>
+        <h1>Results</h1>
+
+        <div class="breadcrumb text-center">
+          <ul class="list-unstyled">
+            <li>Total: ${{ total }}</li>
+            <li>Tip: ${{ tip}}</li>
+            <li>Split Total: $ {{ split }}</li>
+          </ul>
+        </div>
+
+      </section>
+
+    </div>
+  </div>
+
+
+
+</div>
